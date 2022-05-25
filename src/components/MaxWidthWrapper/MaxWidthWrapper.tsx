@@ -1,4 +1,9 @@
+import React from "react";
 import styled from "styled-components";
+
+interface Props {
+  children: React.ReactNode;
+}
 
 const Wrapper = styled.div`
   width: clamp(320px, 95%, 1000px);
@@ -10,7 +15,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const MaxWidthWrapper = ({ children, ...rest }) => (
+const MaxWidthWrapper = ({ children, ...rest }: Props): any => (
   <Wrapper {...rest}>{children}</Wrapper>
 );
 

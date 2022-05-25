@@ -8,10 +8,11 @@ interface Props {
 }
 
 const Wrapper = styled.article`
+  border-radius: 6px;
+  overflow: hidden;
   height: 400px;
   width: 100%;
   max-width: 1000px;
-  background: var(--darkSaturateBlue);
   flex: 1 1 1000px;
   display: flex;
   flex-direction: row-reverse;
@@ -23,7 +24,7 @@ const Wrapper = styled.article`
   }
 `;
 const Body = styled.div`
-  background: gray;
+  background: var(--darkDesaturatedBlue);
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -81,23 +82,22 @@ const Title = styled.h1`
   }
   @media (max-width: 765px) {
     font-size: 22px;
-    margin-top: 12px;
+    margin-top: 24px;
   }
   @media (max-width: ${({ theme }) => theme.layout.breakpoint.mobile}) {
     font-size: 26px;
     width: 100%;
-    margin-top: 0;
   }
 `;
 const Copy = styled.p`
   margin-top: 36px;
   width: 36ch;
-  font-family: var(--ff-lexendDeca);
+  font-family: var(--ff-inter);
   font-size: 15px;
   line-height: 1.5;
   color: var(--slightlyTransparentWhiteOne);
   @media (max-width: 765px) {
-    width: 30ch;
+    width: 26ch;
   }
   @media (max-width: ${({ theme }) => theme.layout.breakpoint.mobile}) {
     width: 30ch;
@@ -116,6 +116,7 @@ const Stats = styled.div`
     width: 100%;
     flex-direction: column;
     gap: 24px;
+    margin-bottom: 30px;
   }
 `;
 
